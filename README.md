@@ -48,5 +48,5 @@ end
 
 此外，full和empty是准确的，almost_full和almost_empty信号都在数值差1时有效。
 
-valid信号在输出数据有效时为高，当FIFO空了之后，及时有rd_en信号，valid信号仍然无效。
+valid信号在输出数据有效时为高，当FIFO空了之后，即使有rd_en信号，valid信号仍然无效。
 
