@@ -5,3 +5,8 @@
 
 ![1](https://user-images.githubusercontent.com/95362898/213909600-24b07922-a4d5-44f9-ac8e-815966f764e7.PNG)
 
+## 同步FIFO测试
+例化同步FIFO IP核，参数如下图所示，
+
+![Uploading 1.PNG…]()
+
