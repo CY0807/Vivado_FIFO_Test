@@ -107,10 +107,22 @@ FIFO_2 FIFO_2_asyn (
   .rd_rst_busy(rd_rst_busy)      // output wire rd_rst_busy
 );
 ````
-其中从官方给的说明中可知：
 
+总体仿真波形图如下：
+![2](https://user-images.githubusercontent.com/95362898/214332353-d6c43189-dfa5-4cb0-a541-6fd909374f09.PNG)
 
+由于FIFO核初始化需要时间，在rst电平拉低后，仍不能进行读写，直到wr_rst_busy和rd_rst_busy信号拉低后才能开始进行读写。
 
+下面观察从零开始写数据的波形图：
+![3](https://user-images.githubusercontent.com/95362898/214337101-6a51c895-80b4-4703-897e-38ea3c4bc917.PNG)
+1、根据官方说明，wr_data_count从不少报，而rd_data_count从不多报。
+2、从上如中可以看出，刚开始写时wr_data_count是及时的，而rd_data_count延后了，即少报了。
+3、empty信号和almost_empty信号在此处也滞后了。
 
+再观察后半部分：
+![4](https://user-images.githubusercontent.com/95362898/214337108-81d7877c-22fd-4a6e-bfae-3c2c46f81bc5.PNG)
+1、由于异步时序问题，wr_data_count和rd_data_count变化并不平滑，且真实数据在两者之间，其误差较小可以接受。
+2、empty信号和full信号分别与rd和wr时钟同步，且与相应的data_count相吻合。
+3、dout和din能匹配上。
 
 
