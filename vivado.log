@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jan 31 22:48:12 2023
+# Process ID: 6288
+# Current directory: E:/github_repo/Vivado_FIFO_Test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17900 E:\github_repo\Vivado_FIFO_Test\vivado_fifo_test.xpr
+# Log file: E:/github_repo/Vivado_FIFO_Test/vivado.log
+# Journal file: E:/github_repo/Vivado_FIFO_Test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 828.480 ; gain = 214.551
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.Performance_Options {First_Word_Fall_Through} CONFIG.Use_Extra_Logic {true} CONFIG.Data_Count_Width {6} CONFIG.Write_Data_Count_Width {6} CONFIG.Read_Data_Count_Width {6} CONFIG.Full_Threshold_Assert_Value {31} CONFIG.Full_Threshold_Negate_Value {30} CONFIG.Empty_Threshold_Assert_Value {4} CONFIG.Empty_Threshold_Negate_Value {5}] [get_ips FIFO_1]
+generate_target all [get_files  E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sources_1/ip/FIFO_1/FIFO_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_1'...
+catch { config_ip_cache -export [get_ips -all FIFO_1] }
+export_ip_user_files -of_objects [get_files E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sources_1/ip/FIFO_1/FIFO_1.xci] -no_script -sync -force -quiet
+reset_run FIFO_1_synth_1
+launch_runs -jobs 2 FIFO_1_synth_1
+[Tue Jan 31 22:50:07 2023] Launched FIFO_1_synth_1...
+Run output will be captured here: E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.runs/FIFO_1_synth_1/runme.log
+export_simulation -of_objects [get_files E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sources_1/ip/FIFO_1/FIFO_1.xci] -directory E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.ip_user_files/sim_scripts -ip_user_files_dir E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.ip_user_files -ipstatic_source_dir E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.cache/compile_simlib/modelsim} {questa=E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.cache/compile_simlib/questa} {riviera=E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.cache/compile_simlib/riviera} {activehdl=E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property top tb_FIFO_syn [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_FIFO_syn' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_FIFO_syn_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sources_1/ip/FIFO_1/sim/FIFO_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_FIFO_syn
+"xvhdl --incr --relax -prj tb_FIFO_syn_vhdl.prj"
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 928.711 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '7' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim'
+"xelab -wto a6b1673964b94157875f1b12da4018fe --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_FIFO_syn_behav xil_defaultlib.tb_FIFO_syn xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a6b1673964b94157875f1b12da4018fe --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_FIFO_syn_behav xil_defaultlib.tb_FIFO_syn xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'data_count' [E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v:75]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_s...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_p...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_CONV_VER(...
+Compiling module fifo_generator_v13_2_4.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.FIFO_1
+Compiling module xil_defaultlib.tb_FIFO_syn
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_FIFO_syn_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim/xsim.dir/tb_FIFO_syn_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim/xsim.dir/tb_FIFO_syn_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Jan 31 22:55:20 2023. For additional details about this file, please refer to the WebTalk help file at E:/Vivado/Vivado/2019.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 94.332 ; gain = 17.469
+INFO: [Common 17-206] Exiting Webtalk at Tue Jan 31 22:55:20 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 928.711 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '20' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_FIFO_syn_behav -key {Behavioral:sim_1:Functional:tb_FIFO_syn} -tclbatch {tb_FIFO_syn.tcl} -view {E:/github_repo/Vivado_FIFO_Test/tb_FIFO_asyn_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/github_repo/Vivado_FIFO_Test/tb_FIFO_asyn_behav.wcfg
+WARNING: Simulation object /tb_FIFO_asyn/rst was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/wr_clk was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/wr_en was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/wr_data_count was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/din was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/full was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/almost_full was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/rd_clk was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/rd_en was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/dout was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/valid was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/rd_data_count was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/empty was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/almost_empty was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/wr_rst_busy was not found in the design.
+WARNING: Simulation object /tb_FIFO_asyn/rd_rst_busy was not found in the design.
+source tb_FIFO_syn.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 945.836 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_FIFO_syn_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:39 . Memory (MB): peak = 945.836 ; gain = 17.125
+run all
+$finish called at time : 2820 ns : File "E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v" Line 60
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {tb_FIFO_asyn_behav.wcfg}
+tb_FIFO_asyn_behav.wcfg
+add_wave {{/tb_FIFO_syn/clk}} {{/tb_FIFO_syn/rst}} {{/tb_FIFO_syn/din}} {{/tb_FIFO_syn/dout}} {{/tb_FIFO_syn/wr_en}} {{/tb_FIFO_syn/rd_en}} {{/tb_FIFO_syn/full}} {{/tb_FIFO_syn/almost_full}} {{/tb_FIFO_syn/empty}} {{/tb_FIFO_syn/almost_empty}} {{/tb_FIFO_syn/valid}} {{/tb_FIFO_syn/data_count}} 
+run all
+$finish called at time : 2820 ns : File "E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v" Line 60
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 964.254 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 31 23:27:33 2023...

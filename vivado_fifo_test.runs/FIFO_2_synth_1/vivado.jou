@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Jan 22 18:46:23 2023
+# Process ID: 7664
+# Current directory: E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.runs/FIFO_2_synth_1
+# Command line: vivado.exe -log FIFO_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIFO_2.tcl
+# Log file: E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.runs/FIFO_2_synth_1/FIFO_2.vds
+# Journal file: E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.runs/FIFO_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source FIFO_2.tcl -notrace

@@ -1,0 +1,18 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto a6b1673964b94157875f1b12da4018fe --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_FIFO_syn_behav xil_defaultlib.tb_FIFO_syn xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'data_count' [E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v:75]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_s...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_bhv_ver_p...
+Compiling module fifo_generator_v13_2_4.fifo_generator_v13_2_4_CONV_VER(...
+Compiling module fifo_generator_v13_2_4.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.FIFO_1
+Compiling module xil_defaultlib.tb_FIFO_syn
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_FIFO_syn_behav

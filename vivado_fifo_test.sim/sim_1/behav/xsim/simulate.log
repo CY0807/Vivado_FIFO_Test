@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 2820 ns : File "E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v" Line 60
+$finish called at time : 2820 ns : File "E:/github_repo/Vivado_FIFO_Test/vivado_fifo_test.srcs/sim_1/new/tb_FIFO_syn.v" Line 60
