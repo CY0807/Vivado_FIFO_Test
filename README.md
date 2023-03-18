@@ -58,6 +58,14 @@ end
 
 3、valid信号在输出数据有效时为高，当FIFO空了之后，即使有rd_en信号，valid信号仍然无效。
 
+### 1.4 first word fall through模式
+
+同上述实验一致，只是将FIFO从normal模式转变为了first word fall through模式，此时read latency为0，得到的仿真波形图如下：
+
+![3](https://user-images.githubusercontent.com/95362898/226122837-e963f3f4-a1c0-4dba-81a5-0a12fddfd612.PNG)
+
+可见两者的区别是在normal模式下，data计数器在rd_en信号后一拍才会减1；而在first word fall through模式下，data计数器减1和rd_en是同时进行的。
+
 ## 2 异步FIFO测试
 ### 2.1 基本设计
 如下见异步FIFO IP核的配置参数：写位宽4， 深度63；读位宽8，深度31
