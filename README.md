@@ -64,7 +64,11 @@ end
 
 ![3](https://user-images.githubusercontent.com/95362898/226122837-e963f3f4-a1c0-4dba-81a5-0a12fddfd612.PNG)
 
-可见两者的区别是在normal模式下，data计数器在rd_en信号后一拍才会减1；而在first word fall through模式下，data计数器减1和rd_en是同时进行的。
+可见两者的区别是：
+
+（1）在normal模式下data计数器在rd_en信号后一拍才会减1；而在first word fall through模式下，data计数器减1和rd_en是同时进行的。
+
+（2）empty信号比normal下的慢2个周期，与almost_empty同步；而data_count始终是准确的。
 
 ## 2 异步FIFO测试
 ### 2.1 基本设计
